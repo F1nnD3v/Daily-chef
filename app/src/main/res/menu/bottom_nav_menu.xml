@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Top voted"
+        android:icon="@drawable/ic_baseline_star_24"
+        android:id="@+id/topVoted"/>
+    <item
+        android:title="Shared recipes"
+        android:icon="@drawable/ic_baseline_access_time_24"
+        android:id="@+id/sharedRecipes"/>
+    <item
+        android:title="My recipes"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:id="@+id/myRecipes"/>
+    <item
+        android:title="My profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:id="@+id/myProfile"/>
+</menu>

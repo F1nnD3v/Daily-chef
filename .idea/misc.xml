@@ -3,7 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/drawable/circle.xml" value="0.356" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/drawable/ic_baseline_access_time_24.xml" value="0.356" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.356" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/drawable/rounded_corners.xml" value="0.356" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/layout/activity_background.xml" value="0.3546875" />
         <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/layout/activity_new_recipe.xml" value="0.3546875" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/layout/activity_profile.xml" value="0.17249240121580547" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/layout/fragment_my_recipes.xml" value="0.3546875" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/layout/fragment_profile.xml" value="0.3546875" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/layout/fragment_shared_recipes.xml" value="0.3546875" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/layout/fragment_top_voted_recipes.xml" value="0.3546875" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3546875" />
       </map>
     </option>
   </component>

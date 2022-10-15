@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DailyChef">
         <activity
+            android:name=".NewRecipeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BackgroundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyRecipesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
