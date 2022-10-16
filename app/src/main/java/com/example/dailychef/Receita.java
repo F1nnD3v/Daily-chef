@@ -25,8 +25,7 @@ public class Receita {
     @ColumnInfo(name = "recipeOwner")
     public String recipeOwner;
 
-    public Receita(int recipeId, String recipeName, String recipeDescription, String recipeWayToDo, boolean shared, String recipeOwner) {
-        this.recipeId = recipeId;
+    public Receita(String recipeName, String recipeDescription, String recipeWayToDo, boolean shared, String recipeOwner) {
         this.recipeName = recipeName;
         this.recipeDescription = recipeDescription;
         this.recipeWayToDo = recipeWayToDo;

@@ -16,6 +16,8 @@ public class BackgroundActivity extends AppCompatActivity {
 
     ActivityBackgroundBinding binding;
 
+    String username;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,15 +35,21 @@ public class BackgroundActivity extends AppCompatActivity {
                     replaceFragment(new SharedRecipesFragment());
                     break;
                 case R.id.myRecipes:
-                    replaceFragment(new MyRecipesFragment());
-                    break;
-                case R.id.myProfile:
                     Bundle bundle = new Bundle();
                     Intent intent = getIntent();
-                    String username = intent.getStringExtra("username");
+                    username = intent.getStringExtra("username");
                     bundle.putString("username", username.toString());
+                    MyRecipesFragment myRecipesFragment = new MyRecipesFragment();
+                    myRecipesFragment.setArguments(bundle);
+                    replaceFragment(myRecipesFragment);
+                    break;
+                case R.id.myProfile:
+                    Bundle bundleBA = new Bundle();
+                    Intent intentBA = getIntent();
+                    String username = intentBA.getStringExtra("username");
+                    bundleBA.putString("username", username.toString());
                     ProfileFragment profileFragment = new ProfileFragment();
-                    profileFragment.setArguments(bundle);
+                    profileFragment.setArguments(bundleBA);
                     replaceFragment(profileFragment);
                     break;
             }
