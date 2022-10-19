@@ -4,11 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,8 +23,14 @@ import android.widget.ImageButton;
 public class MyRecipesFragment extends Fragment {
 
     ImageButton btnAddRecipe;
-
+    AppDatabase db;
     String username;
+
+    RecyclerView myRecipesRecycler;
+
+    TextView txtNoRecipes;
+
+    myRecipesAdapter adapter;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,9 +78,23 @@ public class MyRecipesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_my_recipes, container, false);
 
         btnAddRecipe = view.findViewById(R.id.btnAddRecipe);
+        txtNoRecipes = view.findViewById(R.id.txtNoRecipes);
+        myRecipesRecycler = view.findViewById(R.id.rvMyRecipes);
+
+        db = AppDatabase.getDbInstance(getContext());
 
         if(getArguments() != null) {
             username = getArguments().getString("username");
+        }
+        List<Receita> receitas = db.receitaDao().getReceitasByOwner(username);
+        if(receitas.isEmpty()){
+            txtNoRecipes.setText("You dont have recipes.");
+        }else{
+            txtNoRecipes.setText("");
+            adapter = new myRecipesAdapter(getContext(), receitas);
+            GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+            myRecipesRecycler.setLayoutManager(gridLayoutManager);
+            myRecipesRecycler.setAdapter(adapter);
         }
 
         btnAddRecipe.setOnClickListener(new View.OnClickListener() {

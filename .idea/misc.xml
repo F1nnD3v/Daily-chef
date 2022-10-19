@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Daily-chef/app/src/main/res/layout/fragment_my_recipes.xml" value="0.25" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Daily-chef/app/src/main/res/layout/grid_layout_my_recipes.xml" value="0.322463768115942" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Daily-chef/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1845" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Daily-chef/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1845" />
         <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/drawable/circle.xml" value="0.356" />
         <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/drawable/ic_baseline_access_time_24.xml" value="0.356" />
         <entry key="..\:/Users/35193/AndroidStudioProjects/Dailychef/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.356" />

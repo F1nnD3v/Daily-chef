@@ -2,7 +2,6 @@ package com.example.dailychef;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,7 +30,7 @@ public class NewRecipeActivity extends AppCompatActivity {
         username = getIntent().getStringExtra("username");
 
 
-        txtRecipeName = findViewById(R.id.txtRecipeName);
+        txtRecipeName = findViewById(R.id.txtRecipeNameMyRecipes);
         txtRecipeTutorial = findViewById(R.id.txtRecipeTutorial);
         txtRecipeDescription = findViewById(R.id.txtRecipeDescription);
 
