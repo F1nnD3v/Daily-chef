@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DailyChef">
         <activity
+            android:name=".EditRecipeActivity"
+            android:exported="false" />
+        <activity
             android:name=".NewRecipeActivity"
             android:exported="false" />
         <activity

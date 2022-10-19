@@ -1,9 +1,11 @@
 package com.example.dailychef;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -33,7 +35,15 @@ public class myRecipesAdapter extends RecyclerView.Adapter<myRecipesAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.recipeName.setText(receitas.get(position).recipeName);
-
+        String recipeId = String.valueOf(receitas.get(position).recipeId);
+        holder.imageMyRecipe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), EditRecipeActivity.class);
+                intent.putExtra("recipeId", recipeId);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -43,10 +53,12 @@ public class myRecipesAdapter extends RecyclerView.Adapter<myRecipesAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView recipeName;
+        ImageView imageMyRecipe;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            recipeName = itemView.findViewById(R.id.txtRecipeNameMyRecipes);
+            recipeName = itemView.findViewById(R.id.txtRecipeNameEditRecipe);
+            imageMyRecipe = itemView.findViewById(R.id.imageMyRecipes);
         }
     }
 }

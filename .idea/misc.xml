@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Daily-chef/app/src/main/res/layout/activity_background.xml" value="0.322463768115942" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Daily-chef/app/src/main/res/layout/activity_edit_recipe.xml" value="0.1" />
+        <entry key="..\:/Users/35193/AndroidStudioProjects/Daily-chef/app/src/main/res/layout/activity_new_recipe.xml" value="0.322463768115942" />
         <entry key="..\:/Users/35193/AndroidStudioProjects/Daily-chef/app/src/main/res/layout/fragment_my_recipes.xml" value="0.25" />
         <entry key="..\:/Users/35193/AndroidStudioProjects/Daily-chef/app/src/main/res/layout/grid_layout_my_recipes.xml" value="0.322463768115942" />
         <entry key="..\:/Users/35193/AndroidStudioProjects/Daily-chef/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1845" />

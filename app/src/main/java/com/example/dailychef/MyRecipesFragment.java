@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -86,16 +87,8 @@ public class MyRecipesFragment extends Fragment {
         if(getArguments() != null) {
             username = getArguments().getString("username");
         }
-        List<Receita> receitas = db.receitaDao().getReceitasByOwner(username);
-        if(receitas.isEmpty()){
-            txtNoRecipes.setText("You dont have recipes.");
-        }else{
-            txtNoRecipes.setText("");
-            adapter = new myRecipesAdapter(getContext(), receitas);
-            GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
-            myRecipesRecycler.setLayoutManager(gridLayoutManager);
-            myRecipesRecycler.setAdapter(adapter);
-        }
+
+        setRecipes();
 
         btnAddRecipe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,5 +100,25 @@ public class MyRecipesFragment extends Fragment {
         });
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        setRecipes();
+    }
+
+    public void setRecipes(){
+        List<Receita> receitas = db.receitaDao().getReceitasByOwner(username);
+
+        if(receitas.isEmpty()){
+            txtNoRecipes.setText("You don't have any recipes.");
+        }else{
+            txtNoRecipes.setText("");
+            adapter = new myRecipesAdapter(getContext(), receitas);
+            GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3, GridLayoutManager.VERTICAL, false);
+            myRecipesRecycler.setLayoutManager(gridLayoutManager);
+            myRecipesRecycler.setAdapter(adapter);
+        }
     }
 }

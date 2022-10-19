@@ -30,11 +30,11 @@ public class NewRecipeActivity extends AppCompatActivity {
         username = getIntent().getStringExtra("username");
 
 
-        txtRecipeName = findViewById(R.id.txtRecipeNameMyRecipes);
+        txtRecipeName = findViewById(R.id.txtRecipeNameEditRecipe);
         txtRecipeTutorial = findViewById(R.id.txtRecipeTutorial);
-        txtRecipeDescription = findViewById(R.id.txtRecipeDescription);
+        txtRecipeDescription = findViewById(R.id.txtRecipeDescriptionEditRecipe);
 
-        shareRecipe = findViewById(R.id.checkBoxShareRecipe);
+        shareRecipe = findViewById(R.id.checkBoxShareEditRecipe);
 
         btnAddRecipe = findViewById(R.id.btnAddNewRecipe);
 
@@ -53,6 +53,9 @@ public class NewRecipeActivity extends AppCompatActivity {
                 Receita receita = new Receita(txtRecipeName.getText().toString(), txtRecipeDescription.getText().toString(), txtRecipeTutorial.getText().toString(), shareRecipe.isChecked(), username);
 
                 db.receitaDao().insertRecipe(receita);
+
+                Toast.makeText(getApplicationContext(), "Recipe added successfully!", Toast.LENGTH_LONG).show();
+                finish();
 
             }
         });
