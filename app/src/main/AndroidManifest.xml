@@ -10,22 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DailyChef">
         <activity
-            android:name=".EditRecipeActivity"
+            android:name=".Activities.EditRecipeActivity"
             android:exported="false" />
         <activity
-            android:name=".NewRecipeActivity"
+            android:name=".Activities.NewRecipeActivity"
             android:exported="false" />
         <activity
-            android:name=".BackgroundActivity"
+            android:name=".Activities.BackgroundActivity"
             android:exported="false" />
         <activity
-            android:name=".MyRecipesActivity"
+            android:name=".Activities.MyRecipesActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Activities.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.dailychef;
+package com.example.dailychef.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -9,6 +9,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.dailychef.MyRecipesFragment;
+import com.example.dailychef.ProfileFragment;
+import com.example.dailychef.R;
+import com.example.dailychef.SearchFragment;
+import com.example.dailychef.SharedRecipesFragment;
+import com.example.dailychef.TopVotedRecipesFragment;
 import com.example.dailychef.databinding.ActivityBackgroundBinding;
 import com.example.dailychef.databinding.ActivityMainBinding;
 
@@ -33,6 +39,10 @@ public class BackgroundActivity extends AppCompatActivity {
                     break;
                 case R.id.sharedRecipes:
                     replaceFragment(new SharedRecipesFragment());
+                    break;
+                case R.id.searchRecipes:
+                    SearchFragment searchFragment = new SearchFragment();
+                    replaceFragment(searchFragment);
                     break;
                 case R.id.myRecipes:
                     Bundle bundle = new Bundle();

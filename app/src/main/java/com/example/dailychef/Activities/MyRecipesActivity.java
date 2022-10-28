@@ -1,8 +1,10 @@
-package com.example.dailychef;
+package com.example.dailychef.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.dailychef.R;
 
 public class MyRecipesActivity extends AppCompatActivity {
 

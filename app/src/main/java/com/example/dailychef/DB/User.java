@@ -1,4 +1,4 @@
-package com.example.dailychef;
+package com.example.dailychef.DB;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

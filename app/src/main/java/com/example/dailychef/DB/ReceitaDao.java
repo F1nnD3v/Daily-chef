@@ -1,4 +1,4 @@
-package com.example.dailychef;
+package com.example.dailychef.DB;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -19,6 +19,12 @@ public interface ReceitaDao {
 
     @Query("SELECT * FROM receita WHERE recipeId LIKE :recipeId")
     Receita getReceitaById(int recipeId);
+
+    @Query("SELECT * FROM receita ORDER BY random() LIMIT 10")
+    List<Receita> getRandRecipes();
+
+    @Query("SELECT * FROM receita WHERE recipeName LIKE '%' || :procurar || '%' OR recipeDescription LIKE '%' || :procurar || '%'")
+    List<Receita> procurarReceita(String procurar);
 
     @Insert
     void insertRecipe(Receita... receitas);

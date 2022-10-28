@@ -11,6 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.dailychef.Activities.EditRecipeActivity;
+import com.example.dailychef.DB.Receita;
+
 import java.util.List;
 
 public class myRecipesAdapter extends RecyclerView.Adapter<myRecipesAdapter.ViewHolder> {
@@ -22,7 +25,6 @@ public class myRecipesAdapter extends RecyclerView.Adapter<myRecipesAdapter.View
     public myRecipesAdapter(Context ctx, List<Receita> receitas){
         this.receitas = receitas;
         this.layoutInflater = LayoutInflater.from(ctx);
-
     }
 
     @NonNull

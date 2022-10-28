@@ -1,4 +1,4 @@
-package com.example.dailychef;
+package com.example.dailychef.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,12 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.Toast;
+
+import com.example.dailychef.DB.AppDatabase;
+import com.example.dailychef.DB.Receita;
+import com.example.dailychef.R;
+
+import java.util.Calendar;
 
 public class NewRecipeActivity extends AppCompatActivity {
 
@@ -36,7 +42,7 @@ public class NewRecipeActivity extends AppCompatActivity {
 
         shareRecipe = findViewById(R.id.checkBoxShareEditRecipe);
 
-        btnAddRecipe = findViewById(R.id.btnAddNewRecipe);
+        btnAddRecipe = findViewById(R.id.btnEditRecipe);
 
         backButton = findViewById(R.id.backButton);
 
@@ -50,7 +56,9 @@ public class NewRecipeActivity extends AppCompatActivity {
                     return;
                 }
 
-                Receita receita = new Receita(txtRecipeName.getText().toString(), txtRecipeDescription.getText().toString(), txtRecipeTutorial.getText().toString(), shareRecipe.isChecked(), username);
+                String time = Calendar.getInstance().getTime().toString();
+
+                Receita receita = new Receita(txtRecipeName.getText().toString(), txtRecipeDescription.getText().toString(), txtRecipeTutorial.getText().toString(), shareRecipe.isChecked(), username, time.toString());
 
                 db.receitaDao().insertRecipe(receita);
 

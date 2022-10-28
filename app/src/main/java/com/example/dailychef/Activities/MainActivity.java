@@ -1,4 +1,4 @@
-package com.example.dailychef;
+package com.example.dailychef.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.dailychef.DB.AppDatabase;
+import com.example.dailychef.DB.User;
+import com.example.dailychef.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -9,6 +9,9 @@
         android:title="Shared recipes"
         android:icon="@drawable/ic_baseline_access_time_24"
         android:id="@+id/sharedRecipes"/>
+    <item android:title="Search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:id="@+id/searchRecipes"/>
     <item
         android:title="My recipes"
         android:icon="@drawable/ic_baseline_menu_book_24"

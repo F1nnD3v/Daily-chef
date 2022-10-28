@@ -1,4 +1,4 @@
-package com.example.dailychef;
+package com.example.dailychef.DB;
 
 import android.content.Context;
 

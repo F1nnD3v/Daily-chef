@@ -12,7 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.dailychef.Activities.NewRecipeActivity;
+import com.example.dailychef.DB.AppDatabase;
+import com.example.dailychef.DB.Receita;
 
 import java.util.List;
 
